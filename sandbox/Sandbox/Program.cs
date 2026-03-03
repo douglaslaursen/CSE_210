@@ -25,8 +25,7 @@ class Program
 
         myCircle.SetRadius(10);
         Console.WriteLine(myCircle.GetRadius());
-
-
+        myCircle._radius = 900;
 
         Console.WriteLine("Circle 2");
 
@@ -34,6 +33,9 @@ class Program
 
         myCircle2.SetRadius(99999999);
         Console.WriteLine(myCircle2.GetRadius());
+
+        Console.WriteLine(myCircle2.GetArea());
+        Console.WriteLine(myCircle2.GetCircumference());
 
 
     //     // Calling the function
