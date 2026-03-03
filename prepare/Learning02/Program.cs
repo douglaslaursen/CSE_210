@@ -11,7 +11,7 @@ class Program
         myFirstJob._startYear = 1989;
         myFirstJob._endYear = 1994;
 
-        myFirstJob.displayJob();
+        // myFirstJob.displayJob();  //
 
         // Job mySecondJob = new Job();  //Not related in any way so will print nothing...
         // mySecondJob.displayJob(); 
@@ -23,6 +23,16 @@ class Program
         mySecondJob._startYear = 1994;
         mySecondJob._endYear = 2022;
         
-        mySecondJob.displayJob();
+        // mySecondJob.displayJob();
+
+        // ---------- Make and Print list for Resume ------------
+        Resume myResume = new Resume();
+        myResume._name = "Douglas Laursen";
+        myResume._jobs = new List<Job>();
+        myResume._jobs.Add(myFirstJob);
+        myResume._jobs.Add(mySecondJob);
+
+        myResume.DisplayResume();
+        Console.WriteLine("");
     }
 }

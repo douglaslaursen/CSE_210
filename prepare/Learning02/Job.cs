@@ -9,6 +9,6 @@ class Job
 
     public void displayJob()
     {
-        Console.WriteLine($"\nCompany Name: {_companyName}, Title: {_jobTitle}, Started: {_startYear}, Ended: {_endYear}\n");
+        Console.WriteLine($"\nCompany Name: {_companyName} \nTitle: {_jobTitle} \nStarted: {_startYear} \nEnded: {_endYear}");
     }
 }
