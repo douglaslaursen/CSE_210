@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Entry> _entries = new List<Entry>{}; 
+        Journal journal = new Journal(); 
 
         Menu menu = new Menu();
         bool done = false;
@@ -17,37 +17,53 @@ class Program
                 case 1:
                 // Create new Journal Entry
                 // Add entry to list of journal entries
+                Console.WriteLine("");
                 Entry entry = new Entry();
                 entry.CreateEntry();
-                _entries.Add(entry);
+                journal.AddEntry(entry);
                 break;
 
                 case 2:
                 // Display Journal Entries
-                foreach(Entry entry1 in _entries)
+                Console.WriteLine("");
+                foreach (Entry entry1 in journal.entries)
                 {
-                    // Console.WriteLine(job);
                     entry1.displayResponse();
                 }
-                Console.WriteLine("Press Enter to Continue");
+                Console.WriteLine("\nPress Enter to Continue");
                 Console.ReadLine();
                 break;
 
                 case 3:
                 // Save journal to file
+                Console.Write("Enter filename to save: ");
+                string saveFile = Console.ReadLine();
 
+                journal.WriteToFile(saveFile);
+
+                Console.WriteLine("Journal saved!");
+                Console.WriteLine("\nPress Enter to Continue");
+                Console.ReadLine();
                 break;
 
                 case 4:
                 // Load journal from file
+                Console.Write("Enter filename to load: ");
+                string loadFile = Console.ReadLine();
 
+                journal.ReadFromFile(loadFile);
+
+                Console.WriteLine("Journal loaded!");
+                Console.WriteLine("\nPress Enter to Continue");
+                Console.ReadLine();
                 break;
 
                 case 5:
                 // Share Scripture
                 Entry scripture = new Entry();
+                Console.WriteLine("");
                 scripture.DisplayScripture();
-                Console.WriteLine("Press Enter to Continue");
+                Console.WriteLine("\nPress Enter to Continue");
                 Console.ReadLine();
                 break;
 
