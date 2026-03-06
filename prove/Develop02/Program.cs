@@ -6,7 +6,7 @@ class Program
     {
         List<Entry> _entries = new List<Entry>{}; 
 
-        Menu menu= new Menu();
+        Menu menu = new Menu();
         bool done = false;
         int userResponse;
         do
@@ -32,15 +32,26 @@ class Program
                 Console.WriteLine("Press Enter to Continue");
                 Console.ReadLine();
                 break;
+
                 case 3:
                 // Save journal to file
 
                 break;
+
                 case 4:
                 // Load journal from file
 
                 break;
+
                 case 5:
+                // Share Scripture
+                Entry scripture = new Entry();
+                scripture.DisplayScripture();
+                Console.WriteLine("Press Enter to Continue");
+                Console.ReadLine();
+                break;
+
+                case 6:
                     done = true;
                     break;
             

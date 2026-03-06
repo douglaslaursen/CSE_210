@@ -7,7 +7,8 @@ class Menu
         "2 - Display Journal",
         "3 - Save Journal to file",
         "4 - Read Journal from file",
-        "5- Quit"
+        "5 - Read one favorite Scripture",
+        "6- Quit"
     };
     public int ProcessMenu()
     {
@@ -21,7 +22,7 @@ class Menu
                 Console.WriteLine(line);
             }
             userResponse = int.Parse(Console.ReadLine());
-        } while(userResponse <1 || userResponse > 5);
+        } while(userResponse <1 || userResponse > 6);
 
         return userResponse;
     }
