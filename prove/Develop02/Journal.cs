@@ -13,7 +13,7 @@ class Journal
         {
             foreach(Entry entry in entries)
             {
-                outputFile.WriteLine(entry.CreateFileSystemString());
+                outputFile.WriteLine($"{entry._date}#{entry._prompt}#{entry._response}");
             }
         }
     }

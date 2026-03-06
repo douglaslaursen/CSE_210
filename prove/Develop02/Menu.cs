@@ -8,7 +8,7 @@ class Menu
         "3 - Save Journal to file",
         "4 - Read Journal from file",
         "5 - Read one favorite Scripture",
-        "6- Quit"
+        "6 - Quit"
     };
     public int ProcessMenu()
     {
