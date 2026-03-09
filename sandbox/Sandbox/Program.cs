@@ -21,11 +21,11 @@ class Program
         // int x = 20;
         Console.WriteLine("Circle");
 
-        Circle myCircle = new Circle();
+        Circle myCircle = new Circle(); // I need to gate keep this now. 
 
-        myCircle.SetRadius(10);
-        Console.WriteLine(myCircle.GetRadius());
-        myCircle._radius = 900;
+        // myCircle.SetRadius(10); // Now this is not needed because my constructor 
+        Console.WriteLine(myCircle.GetRadius());  
+        // myCircle._radius = -905216;  // Why do we not want people to be able to change is because we dont want them to put garbide
 
         Console.WriteLine("Circle 2");
 
