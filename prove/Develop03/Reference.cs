@@ -30,5 +30,4 @@ class Reference
         else 
         return $"{_book} {_chapter} : {_firstVerse}";
     }
-
 }

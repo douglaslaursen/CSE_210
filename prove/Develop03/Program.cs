@@ -1,22 +1,39 @@
 using System;
+using System.Data;
+using System.Diagnostics;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Word myWord = new Word("Bob");
+        Reference myReference = new Reference("John", 3, 16);
 
-        Console.WriteLine(myWord.GetWordString());
+        string verse = "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.";
+        string[] splitStrings = verse.Split();
 
-        myWord.HideWord();
-        Console.WriteLine(myWord.GetWordString());
+        List<Word> words=[];
+        foreach(string verseString in splitStrings)
+        {
+            Word verseWord = new Word(verseString);
+            words.Add(verseWord);
+        }
+        Scripture myScripture = new Scripture(words, myReference);
 
+        bool done = false;
 
-        Word myWord2 = new Word("Moroni,;:");
+        while (!done)
+        {
+            Console.Clear();
+            Console.WriteLine("Press enter to contine or type 'q' to quite.\n");
 
-        Console.WriteLine(myWord2.GetWordString());
+            myScripture.PrintText();
+            done = myScripture.HideWords();
 
-        myWord2.HideWord();
-        Console.WriteLine(myWord2.GetWordString());
+            string stop = Console.ReadLine();
+            if (stop == "q")
+            {
+                done = true;
+            }
+        }
     }
 }
