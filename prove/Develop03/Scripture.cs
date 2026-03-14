@@ -21,13 +21,10 @@ class Scripture
                 hiddenCount++;
             }
 
-            if (_words.Count() - 3< hiddenCount)
+            if (_words.All(w => w.IsHidden()))
             {
-                foreach(Word word in _words)
-                {
-                    word.HideWord();
-                    return true;
-                }
+                _words[randomIndex].HideWord();
+                return true;
             }
         }
         return false;
