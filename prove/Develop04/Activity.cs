@@ -23,6 +23,11 @@ class Activity
         Console.WriteLine(_discription);
     }
 
+    public void DisplayEnding()
+    {
+        Console.WriteLine("Well done!!");
+    }
+
     public void DisplaySpinner(string message, int seconds)
     {
         DateTime currentTime = DateTime.Now;
@@ -44,6 +49,17 @@ class Activity
         }
 
         Console.CursorVisible = true;
+    }
+
+    public void RunCountDown(string message, int seconds)
+    {
+        for (int i = seconds; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b");
+        }
+        Console.WriteLine($"{message}");
     }
     
 }
