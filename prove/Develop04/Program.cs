@@ -9,5 +9,7 @@ class Program
 
         activity.DisplayGreeting();
         activity.DisplayDescription();
+
+        activity.DisplaySpinner("Hello There", 25);
     }
 }
