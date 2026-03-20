@@ -25,11 +25,13 @@ class Menu
         }
         else if (option == 2)
         {
-            
+            ReflectionActivity reflectionActivity = new ReflectionActivity([], []);
+            reflectionActivity.RunReflectionActivity();
         }
         else if (option == 3)
         {
-            
+            ListingActivity listingActivity = new ListingActivity([], []);
+            listingActivity.RunListingActivity();
         }
         else if (option == 4)
         {

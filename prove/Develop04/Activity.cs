@@ -32,7 +32,7 @@ class Activity
 
     public void DisplayEnding()
     {
-        Console.WriteLine($"Well Done \n\nYou have completed another {_duration} of the {_name}");
+        Console.WriteLine($"Well Done \n\nYou have completed another {_duration} second of the {_name}");
     }
 
     public void DisplaySpinner(string message, int seconds)
@@ -73,6 +73,21 @@ class Activity
 
         Console.CursorVisible = true;
     }
+
+    public void IntroActivity()
+    {
+        Console.Clear();
+        DisplayGreeting();
+        Console.WriteLine();
+        DisplayDescription();
+        Console.WriteLine();
+        DisplayDuration();
+        
+        Console.Clear();
+        DisplaySpinner("Get ready...", 3);
+        Console.WriteLine();
+        Console.WriteLine();
+    }
     
     // public void StartTimer()
     // {
@@ -80,11 +95,6 @@ class Activity
     // }
 
     // public bool HasTimerExpired()
-    // {
-        
-    // }
-
-    // public void ObtainDuration()
     // {
         
     // }
