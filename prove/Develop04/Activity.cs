@@ -16,7 +16,7 @@ class Activity
     public void DisplayGreeting()
     {
         Console.Clear();
-        Console.WriteLine($"Weldome to the {_name} Activity.");
+        Console.WriteLine($"Welcome to the {_name} Activity.");
     }
 
     public void DisplayDescription()
@@ -32,7 +32,7 @@ class Activity
 
     public void DisplayEnding()
     {
-        Console.WriteLine($"Well Done \n\nYou have completed another {_duration} second of the {_name}");
+        Console.WriteLine($"Well Done!! \n\nYou have completed another {_duration} second of the {_name} Activity");
     }
 
     public void DisplaySpinner(string message, int seconds)
