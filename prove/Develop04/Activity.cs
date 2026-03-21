@@ -88,14 +88,4 @@ class Activity
         Console.WriteLine();
         Console.WriteLine();
     }
-    
-    // public void StartTimer()
-    // {
-        
-    // }
-
-    // public bool HasTimerExpired()
-    // {
-        
-    // }
 }
