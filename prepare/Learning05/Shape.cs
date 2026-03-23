@@ -1,7 +1,4 @@
-using System.Drawing;
-using System.Runtime.CompilerServices;
-
-class Shape
+public abstract class Shape
 {
     private string _color;
 
@@ -19,10 +16,6 @@ class Shape
     {
         _color = color;
     }
-
-    public double GetArea()
-    {
-        int area = 0;
-        return area;
-    }
+    
+    public abstract double GetArea();
 }
