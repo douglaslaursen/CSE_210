@@ -1,7 +1,4 @@
-
-using System.Runtime.CompilerServices;
-
-class Person
+abstract class Person // now that it is abstact it cant become a opject so we cant just have a normal person. 
 {
     private string _firstName;
     private string _lastName;
@@ -22,6 +19,8 @@ class Person
     {
         return $"Name: {_firstName} {_lastName}, age: {_age}, weight: {_weight}";
     }
+
+    public abstract double GetSalary();
 
     public int GetAge()
     {
