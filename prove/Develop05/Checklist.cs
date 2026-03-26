@@ -1,6 +1,6 @@
-class SimpleGoal : Goal
+class ChecklistGoal : Goal
 {
-    public SimpleGoal() : base()
+    public ChecklistGoal() : base()
     {
         
     }
@@ -8,9 +8,5 @@ class SimpleGoal : Goal
     public override void CreateGoal()
     {
         base.IntroGoal();
-
-
-        // Go back to main
-        
     }
 }

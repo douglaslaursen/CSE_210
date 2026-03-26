@@ -4,15 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Goal myGoal = new Goal();
+        Goals TotalScore = new Goals();
+        TotalScore.DisplayScore();
 
-        // myGoal.SetName();
-        // myGoal.SetDiscription();
-        // myGoal.SetPoints();
-        // Console.WriteLine(myGoal.GetConsoleString());
-
-        SimpleGoal mySimpleGoal = new SimpleGoal();
-        mySimpleGoal.CreateGoal();
-        Console.WriteLine(mySimpleGoal.GetConsoleString());
+        Menu menu = new Menu();
+        menu.DisplayMainMenu();
     }
 }

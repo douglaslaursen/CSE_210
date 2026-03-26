@@ -15,31 +15,38 @@ abstract class Goal
         _goalType = "";
     }
 
+    public abstract void CreateGoal();
+
     public void SetName()
     {
-        Console.Write("Please enter the name of your goal: ");
+        Console.Write("What is the name of your goal? ");
         _goalName = Console.ReadLine();
     }
 
     public void SetDiscription()
     {
-        Console.Write("Please enter the discrioption of your goal: ");
+        Console.Write("What is a short description of it? ");
         _goalDiscription = Console.ReadLine();
     }
 
     public void SetPoints()
     {
-        Console.Write("Please enter the points of your goal: ");
+        Console.Write("What is the amount of points associated with this goal? ");
         _numberOfPoints = int.Parse(Console.ReadLine());
     }
 
 
-
     public virtual string GetConsoleString()
     {
-        return $"Goal Information: {_goalName}, {_goalDiscription}, {_numberOfPoints}";
+        return $"[ ] {_goalName} ({_goalDiscription}) {_numberOfPoints}";
     }
 
-    public abstract void CreateGoal();
+    public void IntroGoal()
+    {
+        SetName();
+        SetDiscription();
+        SetPoints();
+    }
+
 
 }
