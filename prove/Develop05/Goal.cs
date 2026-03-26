@@ -1,6 +1,4 @@
-using System.IO.Compression;
-
-class Goal
+abstract class Goal
 {
     private int _numberOfPoints;
     private bool _status;
@@ -35,14 +33,13 @@ class Goal
         _numberOfPoints = int.Parse(Console.ReadLine());
     }
 
-    
+
 
     public virtual string GetConsoleString()
     {
         return $"Goal Information: {_goalName}, {_goalDiscription}, {_numberOfPoints}";
     }
 
-
-
+    public abstract void CreateGoal();
 
 }
