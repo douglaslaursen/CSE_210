@@ -1,12 +1,20 @@
 class EternalGoal : Goal
 {
-    public EternalGoal() : base()
+    public EternalGoal(string goalName, string goalDiscription, int numberOfPoints, bool status, int completions) 
+    : base("", "", 0, false, "")
     {
-        
+        _numberOfCompletions = completions;
     }
+
+    private int _numberOfCompletions;
 
     public override void CreateGoal()
     {
         base.IntroGoal();
+    }
+
+    public override int RecordEvent()
+    {
+        return 5;
     }
 }

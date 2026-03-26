@@ -1,6 +1,7 @@
 class SimpleGoal : Goal
 {
-    public SimpleGoal() : base()
+    public SimpleGoal(string goalName, string goalDiscription, int numberOfPoints, bool status) 
+    : base("", "", 0, false, "")
     {
         
     }
@@ -11,6 +12,11 @@ class SimpleGoal : Goal
 
 
         // Go back to main
-        
+
+    }
+
+    public override int RecordEvent()
+    {
+        return 5;
     }
 }

@@ -6,16 +6,17 @@ abstract class Goal
     private string _goalDiscription;
     private string _goalType;
 
-    public Goal()
+    public Goal(string goalName, string goalDiscription, int numberOfPoints, bool status, string type)
     {
-        _goalName = "";
-        _goalDiscription = "";
-        _status = false;
-        _numberOfPoints = 0;
-        _goalType = "";
+        _goalName = goalName;
+        _goalDiscription = goalDiscription;
+        _status = status;
+        _numberOfPoints = numberOfPoints;
+        _goalType = type;
     }
 
     public abstract void CreateGoal();
+    public abstract int RecordEvent();
 
     public void SetName()
     {
@@ -38,8 +39,10 @@ abstract class Goal
 
     public virtual string GetConsoleString()
     {
-        return $"[ ] {_goalName} ({_goalDiscription}) {_numberOfPoints}";
+        return $"[ ] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
     }
+
+    
 
     public void IntroGoal()
     {
@@ -47,6 +50,7 @@ abstract class Goal
         SetDiscription();
         SetPoints();
     }
+
 
 
 }
