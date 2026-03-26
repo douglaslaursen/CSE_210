@@ -18,6 +18,21 @@ abstract class Goal
     public abstract void CreateGoal();
     public abstract int RecordEvent();
 
+    public virtual string GetConsoleString()
+    {
+        return $"[ ] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
+    }
+
+    public virtual string GetFileSystemString()
+    {
+        return $"";
+    }
+
+    public virtual string GetGoalType()
+    {
+        return $"";
+    }
+
     public void SetName()
     {
         Console.Write("What is the name of your goal? ");
@@ -37,12 +52,8 @@ abstract class Goal
     }
 
 
-    public virtual string GetConsoleString()
-    {
-        return $"[ ] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
-    }
 
-    
+
 
     public void IntroGoal()
     {

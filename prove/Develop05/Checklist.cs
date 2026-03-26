@@ -21,4 +21,24 @@ class ChecklistGoal : Goal
     {
         return 5;
     }
+
+    public override string GetConsoleString()
+    {
+        return base.GetConsoleString();
+    }
+
+    public override string GetFileSystemString()
+    {
+        return base.GetFileSystemString();
+    }
+
+    private void OptainMaxGoal()
+    {
+        
+    }
+
+    private void ObtainBonusPoints()
+    {
+        
+    }
 }
