@@ -6,11 +6,10 @@ class Goals
     private List<Goal> _goals;
     private string _filename;
 
-    public Goals(string fileName)
+    public Goals()
     {
         _totalScore = 0;
         _goals = [];
-        _filename = fileName;
     }
 
     public void AddGoal(Goal goal)

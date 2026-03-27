@@ -1,7 +1,12 @@
 class SimpleGoal : Goal
 {
-    public SimpleGoal(string goalName, string goalDiscription, int numberOfPoints, bool status) 
-    : base("", "", 0, false, "")
+    // public SimpleGoal(string goalName, string goalDiscription, int numberOfPoints, bool status) 
+    // : base("", "", 0, false, "")
+    // {
+        
+    // }
+
+    public SimpleGoal() : base("", "", 0, false, "")
     {
         
     }

@@ -6,6 +6,12 @@ class EternalGoal : Goal
         _numberOfCompletions = completions;
     }
 
+    public EternalGoal() 
+    : base("", "", 0, false, "")
+    {
+
+    }
+
     private int _numberOfCompletions;
 
     public override void CreateGoal()
