@@ -2,14 +2,15 @@ class Menu
 {
     public void DisplayMainMenu()
     {
+        Goals myGoals = new Goals();
+
         int option1 = 0;
         do
         {
             // Shows score
             Console.Clear();
             Console.WriteLine();
-            Goals TotalScore = new Goals();
-            TotalScore.DisplayScore();
+            myGoals.DisplayScore();
             Console.WriteLine();
 
             // display menu
@@ -18,11 +19,11 @@ class Menu
             Console.Write("Select a Choice from the menu: ");
             option1 = int.Parse(Console.ReadLine());
 
-            DisplayMainOption(option1);
+            DisplayMainOption(option1, myGoals);
         } while (option1 != 6);
     }
 
-    public void DisplayGoalMenu()
+    public void DisplayGoalMenu(Goals myGoals)
     {
         int option2 = 0;
         do
@@ -33,19 +34,19 @@ class Menu
             Console.Write("Select a Choice from the menu: ");
             option2 = int.Parse(Console.ReadLine());
 
-            DisplayGoalOptions(option2);
+            DisplayGoalOptions(option2, myGoals);
         } while (option2 != 4);
     }
 
-    public void DisplayMainOption(int option1)
+    public void DisplayMainOption(int option1, Goals myGoals)
     {
         if (option1 == 1)
         {
-            DisplayGoalMenu();
+            DisplayGoalMenu(myGoals);
         }
         else if (option1 == 2)
         {
-            
+            myGoals.DisplayGoals();
         }
         else if (option1 == 3)
         {
@@ -65,22 +66,25 @@ class Menu
         }
     }
 
-    public void DisplayGoalOptions(int Option2)
+    public void DisplayGoalOptions(int Option2, Goals myGoals)
     {
         if (Option2 == 1)
         {
             SimpleGoal simpleGoal = new SimpleGoal();
             simpleGoal.CreateGoal();
+            myGoals.AddGoal(simpleGoal);
         }
         else if (Option2 == 2)
         {
             EternalGoal eternalGoal = new EternalGoal();
             eternalGoal.CreateGoal();
+            myGoals.AddGoal(eternalGoal);
         }
         else if (Option2 == 3)
         {
             ChecklistGoal checklistGoal = new ChecklistGoal();
             checklistGoal.CreateGoal();
+            myGoals.AddGoal(checklistGoal);
         }
     }
 }
