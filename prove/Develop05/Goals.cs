@@ -53,6 +53,7 @@ class Goals
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
+            outputFile.WriteLine($"Score#{_totalScore}");
             foreach(Goal goal in _goals)
             {
                 outputFile.WriteLine(goal.GetFileSystemString());

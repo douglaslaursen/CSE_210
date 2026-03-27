@@ -12,7 +12,6 @@ abstract class Goal
         _goalDiscription = goalDiscription;
         _status = status;
         _numberOfPoints = numberOfPoints;
-        _goalType = type;
     }
 
     public abstract void CreateGoal();
@@ -25,7 +24,7 @@ abstract class Goal
 
     public virtual string GetFileSystemString()
     {
-        return $"{_goalName}#{_goalDiscription}#{_numberOfPoints}";
+        return $"{_goalType}#{_goalName}#{_goalDiscription}#{_numberOfPoints}";
     }
 
     public virtual string GetGoalType()
@@ -55,11 +54,12 @@ abstract class Goal
 
 
 
-    public void IntroGoal()
+    public void IntroGoal(string goalType)
     {
         SetName();
         SetDiscription();
         SetPoints();
+        _goalType = goalType;
     }
 
 

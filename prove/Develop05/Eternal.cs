@@ -16,7 +16,7 @@ class EternalGoal : Goal
 
     public override void CreateGoal()
     {
-        base.IntroGoal();
+        base.IntroGoal("EternalGoal");
     }
 
     public override int RecordEvent()
