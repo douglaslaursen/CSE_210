@@ -36,7 +36,8 @@ class Goals
 
         foreach (string line in lines)
         {
-            // string[] parts = line.Split('#');
+            string[] parts = line.Split('#');
+            string lineType = parts[0];
 
             // Entry entry = new Entry();
             // entry._date = parts[0];
@@ -44,6 +45,34 @@ class Goals
             // entry._response = parts[2];
 
             // AddEntry(entry);
+
+            if (lineType == "Score")
+            {
+                _totalScore = int.Parse(parts[1]);
+                
+            }
+            else
+            {
+                string name = parts[1];
+                string discription = parts[2];
+                int numberOfPoints = int.Parse(parts[3]);
+                bool status = bool.Parse(parts[4]);
+                if (lineType == "SimpleGoal")
+                {
+                    SimpleGoal simpleGoal = new SimpleGoal(name, discription, numberOfPoints, status, lineType);
+                    _goals.Add(simpleGoal);
+                }
+                else if (lineType == "EternalGoal")
+                {
+                    EternalGoal eternalGoal = new EternalGoal(name, discription, numberOfPoints, status, lineType, 0);
+                    _goals.Add(eternalGoal);
+                }   
+                else if (lineType == "ChecklistGoal")
+                {
+                    ChecklistGoal checklistGoal = new ChecklistGoal(name, discription, numberOfPoints, status, lineType,0,0,0);
+                    _goals.Add(checklistGoal);
+                }
+            }
         }
     }
 

@@ -54,7 +54,7 @@ class Menu
         }
         else if (option1 == 4)
         {
-            Console.WriteLine("Thank you");
+            myGoals.LoadGoals();
         }
         else if (option1 == 5)
         {

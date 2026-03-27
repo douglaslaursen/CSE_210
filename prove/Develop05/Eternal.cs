@@ -1,7 +1,7 @@
 class EternalGoal : Goal
 {
-    public EternalGoal(string goalName, string goalDiscription, int numberOfPoints, bool status, int completions) 
-    : base("", "", 0, false, "")
+    public EternalGoal(string goalName, string goalDiscription, int numberOfPoints, bool status, string type, int completions) 
+    : base(goalName, goalDiscription, numberOfPoints, status, type)
     {
         _numberOfCompletions = completions;
     }
