@@ -22,6 +22,6 @@ class SimpleGoal : Goal
 
     public override int RecordEvent()
     {
-        return 5;
+        return MarkComplete();
     }
 }

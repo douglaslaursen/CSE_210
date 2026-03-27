@@ -51,7 +51,11 @@ abstract class Goal
     }
 
 
-
+    public int MarkComplete()
+    {
+        _status = true;
+        return _numberOfPoints;
+    }
 
 
     public void IntroGoal(string goalType)

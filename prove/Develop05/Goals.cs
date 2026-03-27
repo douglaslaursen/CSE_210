@@ -39,13 +39,6 @@ class Goals
             string[] parts = line.Split('#');
             string lineType = parts[0];
 
-            // Entry entry = new Entry();
-            // entry._date = parts[0];
-            // entry._prompt = parts[1];
-            // entry._response = parts[2];
-
-            // AddEntry(entry);
-
             if (lineType == "Score")
             {
                 _totalScore = int.Parse(parts[1]);
@@ -105,7 +98,11 @@ class Goals
 
     public void RecordEvent()
     {
-        
+        DisplayGoals();
+        Console.WriteLine("For jalsd;f");
+        int choice = int.Parse(Console.ReadLine());
+
+        _totalScore += _goals[choice -1].RecordEvent();
     }
 
 }
