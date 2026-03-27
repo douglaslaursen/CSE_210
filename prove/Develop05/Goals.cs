@@ -4,7 +4,6 @@ class Goals
 {
     private int _totalScore;
     private List<Goal> _goals;
-    private string _filename;
 
     public Goals()
     {
@@ -22,14 +21,43 @@ class Goals
         Console.Write($"You have {_totalScore} points.\n");
     }
 
+    private string ObtainFileName()
+    {
+        string filename;
+        Console.WriteLine("Please enter the file name: ");
+        filename = Console.ReadLine();
+        return filename;
+    }
+
     public void LoadGoals()
     {
-        
+        string filename = ObtainFileName();
+        string[] lines = File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+            // string[] parts = line.Split('#');
+
+            // Entry entry = new Entry();
+            // entry._date = parts[0];
+            // entry._prompt = parts[1];
+            // entry._response = parts[2];
+
+            // AddEntry(entry);
+        }
     }
 
     public void SaveGoals()
     {
-        
+        string filename = ObtainFileName();
+
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach(Goal goal in _goals)
+            {
+                outputFile.WriteLine(goal.GetFileSystemString());
+            }
+        }
     }
 
     public void DisplayGoals()
@@ -50,8 +78,4 @@ class Goals
         
     }
 
-    private void ObtainFileName(string prompt)
-    {
-        
-    }
 }

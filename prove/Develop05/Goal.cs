@@ -25,7 +25,7 @@ abstract class Goal
 
     public virtual string GetFileSystemString()
     {
-        return $"";
+        return $"{_goalName}#{_goalDiscription}#{_numberOfPoints}";
     }
 
     public virtual string GetGoalType()

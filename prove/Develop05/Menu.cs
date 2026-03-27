@@ -50,7 +50,7 @@ class Menu
         }
         else if (option1 == 3)
         {
-            
+            myGoals.SaveGoals();
         }
         else if (option1 == 4)
         {
