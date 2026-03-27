@@ -19,7 +19,15 @@ abstract class Goal
 
     public virtual string GetConsoleString()
     {
-        return $"[ ] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
+        if(_status == false)
+        {
+            return $"[ ] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
+        }
+        else
+        {
+            return $"[X] {_goalName} ({_goalDiscription}) Worth: {_numberOfPoints}";
+        }
+
     }
 
     public virtual string GetFileSystemString()

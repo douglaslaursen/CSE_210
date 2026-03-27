@@ -47,6 +47,8 @@ class Menu
         else if (option1 == 2)
         {
             myGoals.DisplayGoals();
+            Console.Write("Press enter to contine");
+            Console.ReadLine();
         }
         else if (option1 == 3)
         {

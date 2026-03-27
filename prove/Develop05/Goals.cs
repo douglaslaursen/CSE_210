@@ -90,16 +90,12 @@ class Goals
         {
             Console.WriteLine($"{count++}. {goal.GetConsoleString()}");
         }
-
-        Console.Write("Press Enter to Continue");
-        Console.ReadLine();
-
     }
 
     public void RecordEvent()
     {
         DisplayGoals();
-        Console.WriteLine("For jalsd;f");
+        Console.WriteLine("Which goal did you acocomplish? ");
         int choice = int.Parse(Console.ReadLine());
 
         _totalScore += _goals[choice -1].RecordEvent();
