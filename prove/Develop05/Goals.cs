@@ -24,7 +24,7 @@ class Goals
     private string ObtainFileName()
     {
         string filename;
-        Console.WriteLine("Please enter the file name: ");
+        Console.Write("Please enter the file name: ");
         filename = Console.ReadLine();
         return filename;
     }
@@ -99,7 +99,7 @@ class Goals
     public void RecordEvent()
     {
         DisplayGoals();
-        Console.WriteLine("Which goal did you acocomplish? ");
+        Console.Write("Which goal did you acocomplish? ");
         int choice = int.Parse(Console.ReadLine());
 
         _totalScore += _goals[choice -1].RecordEvent();

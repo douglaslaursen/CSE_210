@@ -28,6 +28,7 @@ class Menu
         int option2 = 0;
         do
         {
+            Console.Clear();
             Console.WriteLine();
             Console.WriteLine("The types of Goals are: ");
             Console.WriteLine("   1. Simple Goal\n   2. Eternal Goal\n   3. Checklist Goal\n   4. Go back to main");
@@ -46,12 +47,14 @@ class Menu
         }
         else if (option1 == 2)
         {
+            Console.WriteLine();
             myGoals.DisplayGoals();
             Console.Write("Press enter to contine");
             Console.ReadLine();
         }
         else if (option1 == 3)
         {
+            Console.WriteLine();
             myGoals.SaveGoals();
         }
         else if (option1 == 4)
@@ -60,6 +63,7 @@ class Menu
         }
         else if (option1 == 5)
         {
+            Console.WriteLine();
             myGoals.RecordEvent();
         }
         else if (option1 == 6)

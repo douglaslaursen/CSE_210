@@ -24,10 +24,10 @@ class ChecklistGoal : Goal
         _numberOfCompletions = 0;
         
         base.IntroGoal("ChecklistGoal");
-        Console.WriteLine("How many times do you want to do this? ");
+        Console.Write("How many times do you want to do this? ");
         _maxGoals = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("What is the bonus you want to recive? ");
+        Console.Write("What is the bonus you want to recive? ");
         _bonusPoints = int.Parse(Console.ReadLine());
     }
 
