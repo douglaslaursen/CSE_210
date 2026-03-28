@@ -21,31 +21,42 @@ class ChecklistGoal : Goal
 
     public override void CreateGoal()
     {
+        _numberOfCompletions = 0;
+        
         base.IntroGoal("ChecklistGoal");
+        Console.WriteLine("How many times do you want to do this? ");
+        _maxGoals = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("What is the bonus you want to recive? ");
+        _bonusPoints = int.Parse(Console.ReadLine());
     }
 
     public override int RecordEvent()
     {
-        return 5;
+        _numberOfCompletions++;
+        if(_numberOfCompletions != _maxGoals)
+        {
+            return _numberOfPoints;
+        }
+        else
+        {
+            return MarkComplete();
+        }
+    }
+
+    public override int MarkComplete()
+    {
+        _status = true;
+        return _numberOfPoints + _bonusPoints;
     }
 
     public override string GetConsoleString()
     {
-        return base.GetConsoleString();
+        return $"{base.GetConsoleString()} Completed {_numberOfCompletions} out of {_maxGoals} Bonus: {_bonusPoints}";
     }
 
     public override string GetFileSystemString()
     {
-        return base.GetFileSystemString();
-    }
-
-    private void OptainMaxGoal()
-    {
-        
-    }
-
-    private void ObtainBonusPoints()
-    {
-        
+        return $"{base.GetFileSystemString()}#{_numberOfCompletions}#{_maxGoals}#{_bonusPoints}";
     }
 }

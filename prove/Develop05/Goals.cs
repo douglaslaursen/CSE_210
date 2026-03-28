@@ -57,12 +57,16 @@ class Goals
                 }
                 else if (lineType == "EternalGoal")
                 {
-                    EternalGoal eternalGoal = new EternalGoal(name, discription, numberOfPoints, status, lineType, 0);
+                    int completions = int.Parse(parts[5]);
+                    EternalGoal eternalGoal = new EternalGoal(name, discription, numberOfPoints, status, lineType, completions);
                     _goals.Add(eternalGoal);
                 }   
                 else if (lineType == "ChecklistGoal")
                 {
-                    ChecklistGoal checklistGoal = new ChecklistGoal(name, discription, numberOfPoints, status, lineType,0,0,0);
+                    int completions = int.Parse(parts[5]);
+                    int max = int.Parse(parts[6]);
+                    int bonus = int.Parse(parts[7]);
+                    ChecklistGoal checklistGoal = new ChecklistGoal(name, discription, numberOfPoints, status, lineType, completions, max, bonus);
                     _goals.Add(checklistGoal);
                 }
             }

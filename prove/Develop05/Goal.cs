@@ -1,10 +1,10 @@
 abstract class Goal
 {
-    private int _numberOfPoints;
-    private bool _status;
+    protected int _numberOfPoints;
+    protected bool _status;
     private string _goalName;
     private string _goalDiscription;
-    private string _goalType;
+    protected string _goalType;
 
     public Goal(string goalName, string goalDiscription, int numberOfPoints, bool status, string type)
     {
@@ -12,6 +12,7 @@ abstract class Goal
         _goalDiscription = goalDiscription;
         _status = status;
         _numberOfPoints = numberOfPoints;
+        _goalType = type;
     }
 
     public abstract void CreateGoal();
@@ -59,7 +60,7 @@ abstract class Goal
     }
 
 
-    public int MarkComplete()
+    public virtual int MarkComplete()
     {
         _status = true;
         return _numberOfPoints;

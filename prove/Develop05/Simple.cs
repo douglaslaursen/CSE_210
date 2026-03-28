@@ -14,10 +14,6 @@ class SimpleGoal : Goal
     public override void CreateGoal()
     {
         base.IntroGoal("SimpleGoal");
-
-
-        // Go back to main
-
     }
 
     public override int RecordEvent()

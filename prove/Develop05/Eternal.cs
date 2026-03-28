@@ -16,21 +16,29 @@ class EternalGoal : Goal
 
     public override void CreateGoal()
     {
+        _numberOfCompletions = 0;
         base.IntroGoal("EternalGoal");
     }
 
     public override int RecordEvent()
     {
-        return 5;
+        return MarkComplete();
+    }
+
+    public override int MarkComplete()
+    {
+        _status = false;
+        _numberOfCompletions++;
+        return _numberOfPoints;
     }
 
     public override string GetConsoleString()
     {
-        return base.GetConsoleString();
+        return $"{base.GetConsoleString()} Completed {_numberOfCompletions} times";
     }
 
     public override string GetFileSystemString()
     {
-        return base.GetFileSystemString();
+        return $"{base.GetFileSystemString()}#{_numberOfCompletions}";
     }
 }
