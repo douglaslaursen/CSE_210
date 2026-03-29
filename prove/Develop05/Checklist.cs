@@ -14,7 +14,6 @@ class ChecklistGoal : Goal
 
     }
 
-
     private int _numberOfCompletions;
     private int _maxGoals;
     private int _bonusPoints;
