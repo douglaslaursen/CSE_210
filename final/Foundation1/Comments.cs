@@ -1,15 +1,15 @@
-class Comments
+class Comment
 {
     private string _commenterName;
     private string _comment;
 
-    public Comments(string commenterName, string comment)
+    public Comment(string commenterName, string comment)
     {
         _commenterName = commenterName;
         _comment = comment;
     }
 
-    public string GetDisplayString()
+    public string GetDisplayComments()
     {
         return $"{_commenterName}: {_comment}";
     }
