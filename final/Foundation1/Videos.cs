@@ -22,6 +22,9 @@ class Video
     {
         Console.WriteLine($"Video: {_title}\nChannel: {_author}\nLength (Seconds): {_length}");
 
+        Console.WriteLine();
+        Console.WriteLine("Comments:");
+
         int count = 1;
         foreach (Comment comment in _comments)
         {
