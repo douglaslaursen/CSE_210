@@ -12,5 +12,10 @@
 
         Vector2D vector2D_4 = vector2D_1 - vector2D_2;
         Console.WriteLine(vector2D_4.GetVectorDisplayString());
+
+        if (vector2D_1 != vector2D_2)
+        {
+            Console.WriteLine("They are not equal");
+        }
     }
 }
