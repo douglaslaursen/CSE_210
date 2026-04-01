@@ -10,5 +10,8 @@ class Program
         Customer customer = new Customer("Bob", address);
 
         customer.DisplayCustomer();
+
+        Product product = new Product("Apple", 0115, 25.63, 4);
+        product.DisplayProduct();
     }
 }
