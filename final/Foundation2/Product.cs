@@ -3,11 +3,11 @@ using System.Diagnostics.Contracts;
 class Product
 {
     private string _productName;
-    private int _productId;
+    private string _productId;
     private double _price;
     private int _quantity;
 
-    public Product(string productName, int productId, double price, int quantity)
+    public Product(string productName, string productId, double price, int quantity)
     {
         _productName = productName;
         _productId = productId;
@@ -15,17 +15,13 @@ class Product
         _quantity = quantity;
     }
 
-    public void DisplayProduct()
-    {
-        Console.WriteLine($"Product: {_productName}");
-        Console.WriteLine($"ID #: {_productId}");
-        Console.WriteLine($"Price: ${_price}");
-        Console.WriteLine($"Quantity: {_quantity}");
-        Console.WriteLine($"Total Price: ${GetProductTotal()}");
-    }
-
     public double GetProductTotal()
     {
         return _price * _quantity;
+    }
+
+    public string GetPackingInfo()
+    {
+        return $"Product: {_productName}\nID #: {_productId}\nItem Price: ${_price}\nQuantity: {_quantity}\nItem Total Price: ${GetProductTotal()}\n";
     }
 }

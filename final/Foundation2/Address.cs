@@ -17,4 +17,9 @@ class Address
     {
         return $"{_streetAddress} {_city}, {_state}, {_country}";
     }
+
+    public bool IsUSA()
+    {
+        return _country.ToUpper() == "USA";
+    }
 }
