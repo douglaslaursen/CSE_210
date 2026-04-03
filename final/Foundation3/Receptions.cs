@@ -1,18 +1,16 @@
 class Receptions : Event
 {
     
-    private int _rsvp;
+    private string _rsvp;
 
-    public Receptions(int rsvp, string title, string description, string date, string time, Address address) 
+    public Receptions(string rsvp, string title, string description, string date, string time, Address address) 
     : base("Reception", title, description, date, time, address)
     {
         _rsvp = rsvp;
     }
 
-    
-
-    public void DisplayFullDetails()
+    public string GetFullDetails()
     {
-        
+        return $"{GetStandardDetails()}\nEvent Type: Reception\nRSVP Email: {_rsvp}";
     }
 }

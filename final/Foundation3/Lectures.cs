@@ -10,11 +10,8 @@ class Lectures : Event
         _speakerName = speakerName;
     }
 
-    public void DisplayFullDetails()
+    public string GetFullDetails()
     {
-        Console.WriteLine();
-        DisplayStandardDetails();
-        Console.WriteLine($"The speaker will be {_speakerName}. The max Copacity is {_maxCapcity}.\nHope to see you there");
-        Console.WriteLine();
+        return $"{GetStandardDetails()}\nEvent Type: Lecture\nSpeaker: {_speakerName}\nCapacity: {_maxCapcity}";
     }
 }

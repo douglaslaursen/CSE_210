@@ -17,19 +17,15 @@ class Event
         _address = address;
     }
 
-    public void DisplayStandardDetails()
+    public string GetStandardDetails()
     {
         // Lists of title, description, date time, and address
-        Console.WriteLine();
-        Console.WriteLine($"{_title}, {_description}, {_date}, {_time}, {_address.GetAddress()}");
-        Console.WriteLine();
+        return $"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nPlease join us @: {_address.GetAddress()}";
     }
 
-    public void DisplayShortDetails()
+    public string GetShortDetails()
     {
         // Lists the type of event, title, and the date
-        Console.WriteLine();
-        Console.WriteLine($"{_type}: {_title}, {_date}");
-        Console.WriteLine();
+        return $"{_type}: {_title}, {_date}";
     }
 }
