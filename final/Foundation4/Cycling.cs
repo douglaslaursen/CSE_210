@@ -7,11 +7,9 @@ class Cycling : Activity
         _speed = speed;
     }
 
-    public void GetCyclingSummary()
+    public override string GetSummary()
     {
-        Console.WriteLine();
-        Console.WriteLine($"{base.GetSummary()}Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile");
-        Console.WriteLine();
+        return $"{base.GetSummary()}Distance: {GetDistance():F2} miles, Speed: {GetSpeed():F2} mph, Pace: {GetPace():F2} min per mile";
     }
 
     public override double GetDistance()

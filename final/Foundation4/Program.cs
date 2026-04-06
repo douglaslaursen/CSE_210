@@ -7,12 +7,13 @@ class Program
         Console.Clear();
 
         Running running = new Running(10, "Nov 12", 120);
-        running.GetRunningSummary();
+        Console.WriteLine(running.GetSummary());
 
         Cycling cycling = new Cycling(15, "Nov 13", 180);
-        cycling.GetCyclingSummary();
+        Console.WriteLine(cycling.GetSummary());
 
         Swimming swimming = new Swimming(6, "Nov 14", 60);
-        swimming.GetSwimmingSummary();
+        Console.WriteLine(swimming.GetSummary());
+
     }
 }
