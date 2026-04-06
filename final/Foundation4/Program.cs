@@ -12,13 +12,13 @@ class Program
 
         Swimming swimming = new Swimming(6, "Nov 14", 60);
 
-        List<Activity> excersize = new List<Activity>();
+        List<Activity> exercise = new List<Activity>();
 
-        excersize.Add(running);
-        excersize.Add(cycling);
-        excersize.Add(swimming);
+        exercise.Add(running);
+        exercise.Add(cycling);
+        exercise.Add(swimming);
 
-        foreach (Activity activity in excersize)
+        foreach (Activity activity in exercise)
         {
             Console.WriteLine();
             Console.WriteLine(activity.GetSummary());
