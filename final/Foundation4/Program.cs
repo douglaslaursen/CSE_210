@@ -12,6 +12,7 @@ class Program
         Cycling cycling = new Cycling(15, "Nov 13", 180);
         cycling.GetCyclingSummary();
 
-        
+        Swimming swimming = new Swimming(6, "Nov 14", 60);
+        swimming.GetSwimmingSummary();
     }
 }
